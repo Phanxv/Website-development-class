@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home page</title>
+        <style>
+        a {
+            font-size: 25pt;
+        }
+	    a:link { 
+            color: pink; 
+        }
+	    a:visited { color:blue; }
+	    a:hover { color: red; }
+	    a:active { color: yellow; }
+        </style>
+    </head>
+    <body>
+        <center>
+        <img src="../images/header.png" alt="Header" style="width:auto; height:auto;" />
+        <nav>
+            <a href="https://www.tni.ac.th/home/" target="_blank">TNI</a> | 
+            <a href="https://www.w3schools.com/html/default.asp" target="_self">w3schools</a> | 
+            <a href="https://www.oracle.com/" target="_top">Oracle</a> | 
+            <a href="https://www.reru.ac.th/" target="_parent">RERU</a>
+        </nav>
+    </center>
+    <h1 style="color:red;"><u>Picture</u></h1>
+    <picture>
+        <source media="(min-width: 850px)" srcset="../images/flower1.jpg" />
+        <source media="(min-width: 650px)" srcset="../images/speaker.jpg" />
+        <source media="(min-width: 450px)" srcset="./images/ps5.jpg" />
+        <img src="./images/notebook.jpg" style="width : auto;" />
+    </picture>      
+    <h1 style="color:red;"><u>Flower 1</u></h1>
+    <img src="../images/flower1.jpg" alt="Flower1" style="width:auto; height:auto;" />
+    <img src="./images/flower3.jpg" alt="Flower3" style="width:420px; height:357px;" />
+    <br />
+    <h1 style="color:red;"><u>Flower 2</u></h1>
+    <img src="../images/flower2.jpg" alt="Flower2" style="width:auto; height:auto;" />
+    <img src="./images/flower4.jpg" alt="Flower4" style="width:386px; height:320px;" />
+    <h1 style="color:red;"><u>Image map</u></h1>
+    <img src="../images/it.jpg" usemap="#workmap" alt="IT" style="width:auto; height:auto;" />
+    <map name="workmap">
+        <area  shape="rect"  coords="23, 205, 230, 400"  href="./links/notebook.html" title="Notebook"/>
+        <area  shape="rect"  coords="300, 14, 460, 232"  href="./links/mobile.html" title="Mobile"/>
+        <area  shape="rect"  coords="560, 40, 770, 181"  href="./links/ps5.html" title="PS5"/>
+        <area  shape="circle"  coords="350,370,45"  href="./links/speaker.html" title="Speaker"/>
+   </map>
+   
+    <br />
+    <br />
+    <h2 style="color:red;"><i>Bachelor of Engineering (Computer Engineering and Artificial Intelligence)</i></h2>
+    <br />
+    <br />
+</body>
+</html>

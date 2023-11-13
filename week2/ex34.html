@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Ex34</title> 
+        <meta charset="UTF-8" />
+        <meta name="keyword" content="web , website, TNI" />
+        <meta name="description" content="HTML is a wonderful language." />
+        <meta name="author" content="chartree@tni.ac.th" />  
+    </head>
+    <body>
+        <form action="./action_page.php" method="post" autocomplete="on">
+            Time:<input type="time" name="time"/> <br/>
+            URL:<input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" required/>
+            <br/>
+            Week:<input type="week" name="week"/> <br/>  
+            <h2>Select:</h2>         
+            <input type="checkbox" name="male" value="male"/>:Male <br/>
+            <input type="checkbox" name="female" value="female"/>:Female 
+            <br/>
+            <br />
+            Color:<input type="color" name="color"/> <br/><br />
+            Date:<input type="date" name="date"/> <br/>
+            Datetime-local:<input type="datetime-local" name="datetime"/> <br/>
+            Email:<input type="email" name="email"/> <br/>
+            Month:<input type="month" name="month"/> <br/>
+            Number:<input type="number" name="number"/> <br/>
+            <h2>Select:</h2>
+            <input type="radio" name="gender" value="male"/>:Male <br/>
+            <input type="radio" name="gender" value="female"/>:Female 
+            <br/>
+            <br />
+            Volume (between 0 and 100):<input type="range" min="0" max="100" step="2" value="0"/> <br/>
+            Search Google:<input type="search" name="search"/> <br/>
+            
+            Phone:<input type="tel" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+            <br/>
+            <br/>
+            Fname:<input type="text" name="fname" placeholder="fname"/> <br/>
+            Password:<input type="password" name="password" placeholder="password" minlength="8"/> <br/>
+            File:<input type="file" name="filename"/> <br/>            
+            <input type="hidden" name="hidden"/> <br/>
+            <input type="image" src="./images/login-button.png" alt="Login"/>
+            <input type="button" value="Click"/>
+            <input type="submit" value="Submit" />
+            <input type="reset"  value="Reseit" />
+          </form>                         
+    </body>
+</html>
