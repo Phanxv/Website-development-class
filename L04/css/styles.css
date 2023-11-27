@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(191, 236, 241);
+
+}
+
+img {
+    border: 15px inset rgb(75, 14, 241);
+    border-radius: 35px;
+    width: 300px;
+    height: auto;
+}
+
+#id1 {
+    width: 450px;
+    height: 180px;
+    background-color: white;
+    border: 3px dashed red;
+    padding: 10px;
+}
+
+.cls {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cls1 {
+    font-size: xx-large;
+    font-style: italic;
+    font-weight: bold;
+    color: red;
+}
+
+.cls2 {
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bolder;
+    color: #DC7633;
+}
+
+.cls3 {
+    font-size: small;
+    font-style: normal;
+    font-weight: 600;
+    color: hsl(6, 59%, 43%);
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('./font/THSarabunNew.ttf');
+}
+
+.clsx {
+    font-family: myFont, 'Angsana New', sans-serif;
+}
+
+.clsx1 {
+    font-size: 20pt;
+    font-style: italic;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: blue;
+}
+
+.clsx2 {
+    font-size: 18pt;
+    font-style: oblique;
+    font-weight: 900;
+    color: green;
+}
+
+.clsx3 {
+    font-size: 16pt;
+    font-style: initial;
+    font-weight: 600;
+    color: hsl(6, 59%, 43%);
+}
+
+.shd1 {
+    text-shadow: 6px -15px 3px rgb(147, 154, 248);
+}
+
+.shd2 {
+    text-shadow: -6px 15px 3px red;
+}

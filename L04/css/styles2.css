@@ -1,0 +1,70 @@
+img {
+    border: 10px inset red;
+    border-radius: 25px;
+    width: 180px;
+    height: auto;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('./font/THSarabunNew.ttf');
+}
+
+.txt {
+    font-family: myFont, 'Angsana New', sans-serif;
+}
+
+.txt1 {
+    font-size: 30pt;
+    font-weight: bolder;
+    color:rgb(57, 24, 247) ;
+}
+
+.txt2{
+    text-decoration: underline red  solid  3px;
+}
+
+.txt3{
+    text-decoration: underline red  wavy  3px;
+}
+
+.dec{
+    direction:rtl;
+}
+
+.blk{
+    width:750px; 
+    height: auto;
+    border: 2px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16pt; 
+    font-weight: bolder;
+}
+
+.blk1{
+    text-indent:10px;
+    text-align:justify;
+    text-transform:capitalize ;
+}
+
+.wrd{
+    word-spacing:3px;
+}
+.wrd1{
+    letter-spacing:2px;
+}
+.wrd2{
+    word-spacing: 3px;
+    line-height: 1.6;
+}
+
+.wrd3{
+    letter-spacing:3px;
+    white-space : pre-wrap;
+    line-height: 1.5;
+}
+
+#txtID{
+    vertical-align:super;
+}
