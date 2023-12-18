@@ -1,0 +1,79 @@
+@font-face {
+    font-family: myFont;
+    src: url('./fonts/THSarabun.ttf');
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: red;
+}
+
+.fnt {
+    font-family: myFont, Times, serif;
+}
+
+.fnt1 {
+    text-decoration: underline;
+}
+
+.blk {
+    font-size: 18px;
+    font-weight: bold;
+    text-indent: 20px;
+    word-spacing: 3px;
+    text-align: justify;
+}
+
+.flt {
+    width: 170px;
+    height: 170px;
+    margin-left: 15px;
+    border-radius: 15px;
+    float: right;
+}
+
+.blk {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.blk1 {
+    width: 650px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    background-image: url('../img/Anna.jpg');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    overflow: scroll;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

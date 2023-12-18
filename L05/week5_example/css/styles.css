@@ -1,0 +1,57 @@
+.box1{
+    border-top: 8px dotted red;
+    border-bottom : 8px dotted red;
+    border-left : 8px dotted red;
+    border-right : 8px dotted red;
+}
+.box2{
+    border: 8px dashed red;
+}
+.box3{
+    border-top: 8px solid red;
+    border-bottom : 8px solid red;
+    border-left : 8px solid red;
+    border-right : 8px solid red;
+}
+.box4{
+    border: 8px double red;
+}
+.box5{
+    border: 8px groove red;
+}
+.box6{
+    border: 8px ridge red;
+}
+.box7{
+    border: 8px inset red;
+}
+.box8{
+    border: 8px outset red;
+}
+.padding{
+    padding-top : 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.w-h{
+    width: 800px;
+    height: 600px;
+}
+.box-sizing{
+    box-sizing:border-box;
+}
+.margin{
+    margin-top: 10px; 
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+    margin-left: 10px; 
+}
+.font{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16pt;
+    text-indent: 20px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: justify;
+}

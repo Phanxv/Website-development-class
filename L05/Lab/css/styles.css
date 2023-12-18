@@ -1,0 +1,67 @@
+@font-face {
+    font-family: myFont;
+    src: url('./fonts/THSarabun.ttf');
+}
+
+#blk {
+    box-sizing: border-box;
+    width: 750px;
+    height: 350px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.fnt {
+    font-family: myFont, Times, serif;
+    font-size: 18pt;
+    font-weight: bold;
+    color: white;
+}
+
+.fnt1 {
+    font-family: myFont, Times, serif;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.fnt2 {
+    color: red;
+    text-decoration: underline red dotted 3px;
+}
+
+.fntcolor{
+    color : red;
+}
+
+.bg {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.bg1 {
+    background-color: green;
+}
+
+.bg2 {
+    background-color: blue;
+    width:  150px;
+}
+
+.bg3 {
+    background-color: red;
+    width:  150px;
+}
+
+.drt {
+    float: right;
+}
+
+.fnt:hover{
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.fnt:active {
+    background-color: green;
+}
