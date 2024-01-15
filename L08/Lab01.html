@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 01</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <script src="./js/scripts.js"></script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="fnt">User Register</div>
+            <form action="/action_page.php"  method="post">
+
+            <div class="row">
+              <div class="column1">
+                <label for="fname">ชื่อ <span class="fnt1">*</span></label>
+              </div>
+              <div class="column2">
+                <input type="text" id="fname" name="fname" placeholder="Your name..">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column1">
+                <label for="lname">นามสกุล <span class="fnt1">*</span></label>
+              </div>
+              <div class="column2">
+                <input type="text" id="lname" name="lname" placeholder="Your last name..">
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="column1">
+                  <label for="age">อายุ <span class="fnt1">*</span></label>
+                </div>
+                <div class="column2">
+                  <input type="text" id="age" name="age" onchange="checkNumber(this);" placeholder="Your age(number)..">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column1">
+                  <label for="gender">เพศ <span class="fnt1">*</span></label>
+                </div>
+                <div class="column2">
+                  <input type="text" id="gender" name="gender" onchange="checkGender(this);" placeholder="Your gender(male, female)..">
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="column1">
+                <label for="country">Country <span class="fnt1">*</span></label>
+              </div>
+              <div class="column2">
+                <input type="text" id="country" name="country" placeholder="Your country..">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column1">
+                <label for="username">Username <span class="fnt1">*</span></label>
+              </div>
+              <div class="column2">
+                <input type="text" id="username" name="username"  placeholder="Your username..">
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="column1">
+                  <label for="password">Password <span class="fnt1">*</span></label>
+                </div>
+                <div class="column2">
+                  <input type="text" id="password" name="password" onchange="checkPass(this);" placeholder="Your password(min length : 8 character)..">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column1">
+                  <label for="repassword">Re-password <span class="fnt1">*</span></label>
+                </div>
+                <div class="column2">
+                  <input type="text" id="repassword" name="repassword" onchange="checkRepass(this);" placeholder="Your re-password(min length : 8 character)..">
+                </div>
+            </div>
+
+            <br>
+            <div class="row" style="text-align: center;">
+              <input type="submit" value="Submit" onclick="return validate();">
+            </div>
+
+            </form>
+          </div>
+    </body>
+</html>
