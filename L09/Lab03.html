@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab03</title>
+    <script src="./js/scripts3.js"></script>
+</head>
+
+<body>
+    <form name="myForm" action="./test.php" method="post">
+        <label for="pname">Product Name:</label>
+        <input type="text" name="pname" id="pname"> <br>
+        <label for="quantity">Quantity:</label>
+        <input type="text" name="quantity" id="quantity"> <br>
+        <label for="price">Price:</label>
+        <input type="text" name="price" id="price"> <br>
+        <label for="description">Description :</label>
+        <input type="text" name="description" id="description"> <br><br>
+        <input type="submit" onclick="return myFunc();" value="Cal Total" />
+    </form>
+    <h1>Output:</h1>
+    <h1 id="total"></h1>
+</body>
+
+</html>

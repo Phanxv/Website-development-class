@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab02</title>
+    <script src="./js/scripts2.js"></script>
+</head>
+
+<body>
+    <form name="myForm" action="./test.php" method="post">
+        <label for="color">Color:</label>
+        <input type="text" name="color" id="color"> <br>
+        <label for="base">Base:</label>
+        <input type="text" name="base" id="base"> <br>
+        <label for="height">Height:</label>
+        <input type="text" name="height" id="height"> <br>
+        <label for="radius">Radius :</label>
+        <input type="text" name="radius" id="radius"> <br><br>
+        <input type="submit" onclick="return myFunc1();" value="Cal Cylinder" />
+        <br>
+        <input type="submit" onclick="return myFunc2();" value="cal Triangle" />
+    </form>
+    <h1>Output:</h1>
+    <h1 id="cylinder"></h1>
+    <h1 id="triangle"></h1>
+</body>
+
+</html>
