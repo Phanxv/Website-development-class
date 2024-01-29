@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Lab01</title>
+   <script src="./js/angular.min.1.6.9.js"></script>
+</head>
+
+<body>
+   <div ng-app="" ng-init="Q=1;P=10;color='yellow'">
+      <fieldset>
+         <legend>Product :</legend>
+         Quantity: <input type="number" ng-model="Q">
+         Price: <input type="number" ng-model="P">
+         <br>
+         <p><b>Total : <span ng-bind="Q*P"></span> Baht</b></p>
+      </fieldset>
+      <br>
+      <fieldset>
+         <legend>Color :</legend>
+         background-color:<input style="background-color:{{color}};" ng-model="color">
+      </fieldset>
+      <br>
+      <fieldset>
+         <legend>Calculate :</legend>
+         X :<input type="text" name="x" ng-model="X">
+         <br>
+         Y :<input type="text" name="y" ng-model="Y">
+         Operator :
+         <select name="myOp" ng-model="myOp">
+            <option value="sub">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+            <option value="remainder">Remainder (%)</option>
+         </select>
+         <hr>
+         <div ng-switch="myOp">
+            <div ng-switch-when="sub">
+               <h1>{{X}} - {{Y}} := {{X-Y}}</h1>
+            </div>
+            <div ng-switch-when="multiply">
+               <h1>{{X}} * {{Y}} := {{X*Y}}</h1>
+            </div>
+            <div ng-switch-when="divide">
+               <h1>{{X}} / {{Y}} := {{X/Y}}</h1>
+            </div>
+            <div ng-switch-when="remainder">
+               <h1>{{X}} % {{Y}} := {{X%Y}}</h1>
+            </div>
+            <div ng-switch-default>
+               <h1>Try Again</h1>
+            </div>
+         </div>
+      </fieldset>
+      <br>
+   </div>
+</body>
+
+</html>

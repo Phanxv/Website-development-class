@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab02</title>
+    <script src="./js/angular.min.1.6.9.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrlx', function ($scope) {
+            $scope.fname = "";
+            $scope.myfname = function () {
+                if($scope.fname.length > 0){
+                    $scope.fshow = false;
+                }
+                else{
+                    $scope.fshow = true;
+                }
+                if($scope.lname.length > 0){
+                    $scope.lshow = false;
+                }
+                else{
+                    $scope.lshow = true;
+                }
+            };
+        });
+        app.controller('myCtrlxx', function ($scope) {
+            $scope.gender = "";
+            $scope.mygender = function () {
+                if($scope.gender.length > 0){
+                    $scope.gshow = false;
+                    $scope.g2show = true;
+                    if($scope.gender == "male" || $scope.gender == "female"){
+                        $scope.g2show = false;
+                    }
+                    else{
+                        $scope.g2show = true;
+                    }
+                }
+                else{
+                    $scope.gshow = true;
+                    $scope.g2show = false;
+                }
+            };
+        });
+        app.controller('myCtrlxxx', function ($scope) {
+            $scope.x = "";
+            $scope.y = "";
+            $scope.result = "";
+            $scope.mycal = function () {
+                if($scope.x.length > 0){
+                    $scope.xshow = false;
+                    $scope.x2show = true;
+                    if(!isNaN($scope.x)){
+                        $scope.x2show = false;
+                    }
+                    else{
+                        $scope.x2show = true;
+                    }
+                }
+                else{
+                    $scope.xshow = true;
+                    $scope.x2show = false;
+                }
+                if($scope.y.length > 0){
+                    $scope.yshow = false;
+                    $scope.y2show = true;
+                    if(!isNaN($scope.y)){
+                        $scope.y2show = false;
+                    }
+                    else{
+                        $scope.y2show = true;
+                    }
+                }
+                else{
+                    $scope.yshow = true;
+                    $scope.y2show = false;
+                    $scope.result = null;
+                }
+                if( $scope.xshow == false && $scope.x2show == false && $scope.yshow == false && $scope.y2show == false ){
+                    $scope.result = 0;
+                    $scope.calx = true;
+                }
+                else {
+                    $scope.calx = false;
+                }
+                if($scope.xshow == false && $scope.x2show == true && $scope.yshow == false && $scope.y2show == true ){
+                    $scope.result = 0;
+                }
+            };
+            $scope.myCalculate = function () {
+                switch($scope.myOp){
+                    case "add":
+                        $scope.result = parseFloat($scope.x) + parseFloat($scope.y);
+                        break;
+                    case "sub":
+                        $scope.result = parseFloat($scope.x) - parseFloat($scope.y);
+                        break;
+                    case "multiply":
+                        $scope.result = parseFloat($scope.x) * parseFloat($scope.y);
+                        break;
+                    case "divide":
+                        $scope.result = parseFloat($scope.x) / parseFloat($scope.y);
+                        break;
+                    case "remainder":
+                        $scope.result = parseFloat($scope.x) % parseFloat($scope.y);
+                        break;
+                }
+            };
+        });                                   
+    </script>
+</head>
+
+<body>
+    <div ng-app="myApp">
+        <fieldset>
+            <legend>Fname, Lname :</legend>
+            <div ng-controller="myCtrlx" ng-init="fshow=true;lshow=true;">
+                Fname: <input type="text" name="fname" ng-model="fname" ng-change="myfname()">
+                <span style="color:red;" ng-show="fshow">Required</span>
+                <br>
+                Lname: <input type="text" name="lname" ng-model="lname" ng-change="myfname()">
+                <span style="color:red;" ng-show="lshow">Required</span>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Gender :</legend>
+            <div ng-controller="myCtrlxx" ng-init="gshow=true;all=false;">
+                Agender : <input type="checkbox" name="all" ng-model="all">
+                <br>
+                Gender : <input type="text" name="gender" ng-model="gender" ng-disabled="all" ng-change="mygender()">
+                <span style="color:red;" ng-show="gshow">Required</span>
+                <span style="color:red;" ng-show="g2show">(female or male only)</span>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Calculate :</legend>
+            <div ng-controller="myCtrlxxx" ng-init="xshow=true;yshow=true;calx=false;myOp='add'">
+                X: <input type="text" name="x" ng-model="x" ng-change="mycal()">
+                <spane style="color:red;" ng-show="xshow">Required</spane>
+                <span style="color:red;" ng-show="x2show">(Not a Number)</span>
+                <br>
+                Y: <input type="text" name="x" ng-model="y" ng-change="mycal()">
+                <spane style="color:red;" ng-show="yshow">Required</spane>
+                <span style="color:red;" ng-show="y2show">(Not a Number)</span>
+                <br>
+                Operator :
+                <select name="myOp" ng-model="myOp">
+                    <option value="add" selected>Addition</option>
+                    <option value="sub">Subtract</option>
+                    <option value="multiply">Multiply</option>
+                    <option value="divide">Divide</option>
+                    <option value="remainder">Remainder (%)</option>
+                </select>
+                <br>
+                <button ng-click="myCalculate();" ng-show="calx">Calculate</button>
+                <hr>
+                Result: <input type="text" name="result" ng-model="result">
+            </div>
+        </fieldset>
+    </div>
+</body>
+
+</html>
