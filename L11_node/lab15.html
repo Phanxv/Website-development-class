@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab15</title>
+</head>
+<body>
+    <script>
+        function display(result) {
+            console.log("CallBack function");
+            console.log("Result = " + result);
+        }
+        function calculator(x, y, callback) {
+            let sum = x + y;
+            callback(sum);
+        }
+        calculator(5, 5, display);
+    </script>
+</body>
+
+</html>

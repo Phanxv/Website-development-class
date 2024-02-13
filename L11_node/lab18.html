@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab18</title>
+</head>
+
+<body>
+    <script>
+        let con = true;
+        function add(x, y) {
+            return new Promise(function(resolve,reject){
+                if (con) {
+                    resolve((x + y));
+                } else {
+                    reject('Promise is rejected');
+                }
+            });
+        }
+
+        add(5, 4).then(function (result) {
+            console.log("Then1");
+            console.log("Result = " + result);
+            return add(5, 7);
+        }).then(function (result) {
+            console.log("Then2");
+            console.log("Result = " + result);
+            return add(7, 7);
+        }).then(function (result) {
+            console.log("Then3");
+            console.log("Result = " + result);
+            return add(8, 8);
+        }).then(function (result) {
+            console.log("Then4");
+            console.log("Result = " + result);
+        }).catch(function(err){
+            console.log("Catch");
+            console.log(err);
+        }).finally(function () {
+            console.log("finally");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab17</title>
+</head>
+
+<body>
+    <script>
+        let con = false;
+        function add(x, y) {
+            return new Promise(function(resolve,reject){
+                if (con) {
+                    resolve((x + y));
+                } else {
+                    reject('Promise is rejected');
+                }
+            });
+        }
+
+        add(5, 4).then(function (result) {
+            console.log("Then");
+            console.log(result);
+        }).catch(function (err) {
+            console.log("Catch");
+            console.log(err);
+        }).finally(function () {
+            console.log("finally");
+        });
+    </script>
+</body>
+
+</html>
