@@ -3,8 +3,10 @@ const { readFile } = require('fs');
 
 const app = express();
 
+app.use(express.static('public'))
+
 app.get('/', (request, response) => {
-    readFile('./student.html', 'utf8', (err, html) => {
+    readFile('./home.html', 'utf8', (err, html) => {
         if(err) {
             response.status(500).send('sorry, out of order')
         }

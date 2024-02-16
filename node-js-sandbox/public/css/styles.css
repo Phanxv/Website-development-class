@@ -1,0 +1,47 @@
+body {
+    margin: 0%;
+}
+
+main {
+    padding: 20px;
+    background-color: #68020F;
+}
+
+main h3, p {
+    color : #FFFFFE;
+}
+
+#website-logo {
+    max-width: 35%;
+    max-height: 35%
+}
+
+.top-nav-bar ul {
+    list-style-type: none;
+    background-color: #FFFFFE;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+}
+
+.top-nav-bar a {
+    color: #030303;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.top-nav-bar a:hover{
+    background-color: hsl(0, 0%, 20%);
+    color: #FFFFFE;
+}
+
+.top-nav-bar .top-nav-bar-left li {
+    float: left;
+}
+
+.top-nav-bar .top-nav-bar-right li {
+    float: right;
+}
