@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Register</title>
+  <script src="./angular.min.1.6.9.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./scripts.js"></script>
+  <style>
+    input.ng-invalid-required {
+        background-color: pink;
+    }
+
+    input.ng-valid-required {
+        background-color: lightgreen;
+    }
+</style>
+</head>
+
+<body ng-app="myApp">
+  <div class="main">
+    <div class="fnt">User Register</div>
+    <form name="myForm" action="http://localhost:3000/register" method="post">
+
+      <div class="row">
+        <div class="column1">
+          <label for="fname">ชื่อ <span class="fnt1">*</span></label>
+        </div>
+        <div class="column2">
+          <input type="text" id="fname" name="fname" ng-model="fname" placeholder="Your name.." required>
+          <span ng-show="myForm.fname.$invalid" style="color:red;">Required.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column1">
+          <label for="lname">นามสกุล <span class="fnt1">*</span></label>
+        </div>
+        <div class="column2">
+          <input type="text" id="lname" name="lname" ng-model="lname" placeholder="Your last name.." required>
+          <span ng-show="myForm.lname.$invalid" style="color:red;">Required.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column1">
+          <label for="age">อายุ <span class="fnt1">*</span></label>
+        </div>
+        <div class="column2">
+          <input type="text" id="age" name="age" ng-model="age" placeholder="Your age(number).." required my-age>
+          <span ng-show="myForm.age.$invalid" style="color:red;">Required.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column1">
+          <label for="gender">เพศ <span class="fnt1">*</span></label>
+        </div>
+        <div class="column2">
+          <input type="text" id="gender" name="gender" ng-model="gender" placeholder="Your gender(male, female).." required my-gender>
+          <span ng-show="myForm.gender.$invalid" style="color:red;">Required.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column1">
+          <label for="country">Country <span class="fnt1">*</span></label>
+        </div>
+        <div class="column2">
+          <input type="text" id="country" name="country"  ng-model="country" placeholder="Your country.." required>
+          <span ng-show="myForm.country.$invalid" style="color:red;">Required.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column1">
+          <label for="username">Username <span class="fnt1">*</span></label>
+        </div>
+        <div class="column2">
+          <input type="text" id="username" name="username" ng-model="username" placeholder="Your username.." required my-username>
+          <span ng-show="myForm.username.$invalid" style="color:red;">Required.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column1">
+          <label for="password">Password <span class="fnt1">*</span></label>
+        </div>
+        <div class="column2">
+          <input type="text" id="password" name="password" ng-model="password" placeholder="Your password(min length : 8 character).."
+            required my-password>
+          <span ng-show="myForm.password.$invalid" style="color:red;">Required.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column1">
+          <label for="repassword">Re-password <span class="fnt1">*</span></label>
+        </div>
+        <div class="column2">
+          <input type="text" id="repassword" name="repassword" ng-model="repassword"
+            placeholder="Your re-password(min length : 8 character).." required my-repassword>
+          <span ng-show="myForm.re-password.$invalid" style="color:red;">Required.</span>
+        </div>
+      </div>
+
+      <br>
+      <div class="row" style="text-align: center;">
+        <input type="submit" value="Submit" ng-show="myForm.fname.$valid && myForm.lname.$valid && myForm.age.$valid && myForm.gender.$valid && myForm.country.$valid && myForm.username.$valid && myForm.password.$valid && myForm.repassword.$valid">
+      </div>
+
+    </form>
+  </div>
+</body>
+
+</html>

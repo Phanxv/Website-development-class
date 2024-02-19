@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+  /*เริ่มต้นสำหรับ desktop first*/
+.column1 {
+    float: left;
+    width: 24.33%;
+    padding: 12px 15px;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.column2 {
+    float: left;
+    width: 75.66%;
+}
+
+/*ยกเลิกการลอย*/
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+
+.main{
+    max-width : 800px;
+    margin: auto;
+}
+
+input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    background-color: white;
+    padding: 12px 15px;
+    margin-top: 5px;
+}
+
+.row input[type=submit]{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    background-color: #ccc;
+    padding: 5px;
+    border: 2px solid #555;
+    border-radius: 10px;
+}
+
+.row input[type=submit]:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+
+.row input[type=submit]:active{
+    background-color: yellowgreen;
+}
+
+.fnt{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color : red;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: double;
+    margin-bottom: 10px;
+}
+
+.fnt1{
+    color:red;
+    font-weight: bolder;
+}
